@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+
+}
+
+.main{
+    width: 100%;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5)100%,rgba(0,0,0,0.5)50%), url(Login.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+
+nav{
+    background-color: gray;
+    display: flex;
+    padding: 1% 3%;
+    justify-content: space-between;
+    align-content: center;
+}
+nav img{
+    margin: 10;
+    width: 75px;
+    height: fit-content;
+}
+.Title{
+    flex: 1;
+    margin: 10;
+    height: 1px;
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+    margin: 10;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.nav-links ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+.text-box{
+    width: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.text-box h1{
+    color: orange;
+    font-size: 42px;
+}
+.text-box p{
+    margin: 10px 0 40px;
+    font-size: 24px;
+    color: white;
+}
+.l-btn{
+    display: inline-block;
+    text-decoration: none;
+    font-size: medium;
+    font-weight: bold;
+    color: rgb(41, 11, 151);
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+.l-btn:hover{
+    border: 1px solid lightgreen;
+    background: lightgreen;
+    transition: 1s;
+}
+@media(max-width: 700px){
+    .text-box h1{
+        color: orange;
+        font-size: 21px;
+    }
+    .nav-links ul li{
+        display: block;
+    }
+    .nav-links{
+        position: absolute;
+        background: #f44336;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+    }
+    nav .burger{
+        display: block;
+        margin: 10px;
+        cursor: pointer;
+    }
+    .nav-links ul{
+        padding: 30px;
+    }
+    
+}
+
